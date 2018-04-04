@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spin Zone</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/styles/index.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row buttons">
+			<div class="col-md-4 text-center">
+				<button id="blue" class="button disabled" identity="0">I'm Democrat!</button>
+			</div>
+			<div class="col-md-4 text-center">
+				<button id="purple" class="button" identity="1">I'm Neutral!</button>
+			</div>
+			<div class="col-md-4 text-center">
+				<button id="red" class="button" identity="2">I'm Republican!</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron text-center">
+					<div class="row">
+						<div class="col-md-12">
+							<h1 class="display-4">Here is the text of a sample article</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="slider" onmouseenter="onSlider(this)" onmouseleave="offSlider(this)">
+					<div id="choose"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 text-center">
+				<div id="value">
+				</div>
+			</div>
+			<div class="col-sm-6 text-center">
+				<div id="label"></div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/index.js"></script>
+</body></html>

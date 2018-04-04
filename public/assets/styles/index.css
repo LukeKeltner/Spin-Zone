@@ -1,0 +1,83 @@
+body
+{
+	margin-top: 30px;
+}
+
+.buttons
+{
+	margin-top: 30px;
+}
+
+.button:hover
+{
+	
+}
+
+.button
+{
+	border:none;
+	padding:10px;
+	height:60px;
+	border-radius: 40px;
+	font-size: 20px;
+}
+
+#blue
+{
+	background-color: blue;
+	color:white;
+}
+
+#purple
+{
+	background-color: purple;
+	color:white;
+}
+
+#red
+{
+	background-color: red;
+	color:white;
+}
+
+.jumbotron
+{
+	margin-top:30px;
+}
+
+#article-title
+{
+	font-size: 100px;
+}
+
+#slider
+{
+	height:60px;
+	background: linear-gradient(to right, blue , red);
+	border-radius: 100px;
+	overflow: visible;
+	margin: 0 auto;
+	position: relative;
+	display: none;
+}
+
+#choose
+{
+	background-color:  rgba(255, 255, 255, 0.5);
+	border:5px solid black;
+	width:60px;
+	height:60px;
+	position: absolute;
+	border-radius: 40px;
+	display: none;
+}
+
+#value
+{
+	font-size:30px;
+}
+
+.col-sm-6
+{
+	font-size: 30px;
+}
