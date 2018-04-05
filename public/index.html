@@ -8,25 +8,33 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row buttons">
-			<div class="col-md-4 text-center">
-				<button id="blue" class="button disabled" identity="0">I'm Democrat!</button>
+
+		<div class="choose-identity">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div id="pick-your-identity">Pick your identity</div>
+					<div id="your-identity-label" class="align-baseline">Pretty Neutral</div>
+					<div id="identity-value">0</div>
+				</div>
 			</div>
-			<div class="col-md-4 text-center">
-				<button id="purple" class="button" identity="1">I'm Neutral!</button>
+			<div class="row">
+				<div class="col-md-12 slide-container">
+					<input type="range" min="-100" max="100" value="0" class="slider" id="myRange">
+				</div>
 			</div>
-			<div class="col-md-4 text-center">
-				<button id="red" class="button" identity="2">I'm Republican!</button>
+			<div class="row">
+				<div class="col-md-9 text-center">
+				</div>
+				<div class="col-md-3 text-center">
+					<button class="button" disabled>Yup!</button>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="jumbotron text-center">
-					<div class="row">
-						<div class="col-md-12">
-							<h1 class="display-4">Here is the text of a sample article</h1>
-						</div>
-					</div>
+
+		<div class="rate-articles">
+			<div class="row rate-articles">
+				<div class="col-md-12 jumbotron text-center">
+					<h1 class="display-4">Here is the text of a sample article</h1>
 				</div>
 			</div>
 		</div>

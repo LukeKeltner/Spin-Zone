@@ -1,12 +1,106 @@
-var identity = 3
-var value = 999
+var identityValue = 0
+var identityExplored = false;
+
+var slider = document.getElementById("myRange");
+var identityValueDisplay = document.getElementById("identity-value");
+var identityLabelDisplay = document.getElementById("your-identity-label");
+identityValueDisplay.innerHTML = slider.value;
+
+slider.oninput = function() 
+{
+	identityExplored = true;
+	$('.button').css({'background-color':'green'})
+	$('.button').prop("disabled", false);
+    identityValueDisplay.innerHTML = Math.abs(this.value);
+    identityValue = this.value
+
+    if (identityValue==0)
+    {
+    	identityLabelDisplay.innerHTML = "Neutral"
+   		identityLabelDisplay.setAttribute("style","color: purple;");
+   		identityValueDisplay.setAttribute("style","color: purple;");
+    }
+
+    else if (identityValue > 0 && identityValue <=10)
+    {
+    	identityLabelDisplay.innerHTML = "Pretty Neutral, maybe with a sprinkle of Conservatism"
+   		identityLabelDisplay.setAttribute("style","color: purple;");
+   		identityValueDisplay.setAttribute("style","color: red;");
+    }
+
+    else if (identityValue > 10 && identityValue <= 25)
+    {
+    	identityLabelDisplay.innerHTML = "Leaning Conservative"
+   		identityLabelDisplay.setAttribute("style","color: red;");
+   		identityValueDisplay.setAttribute("style","color: red;");    	
+    }
+
+    else if (identityValue > 25 && identityValue <= 50)
+    {
+    	identityLabelDisplay.innerHTML = "Conservative"
+   		identityLabelDisplay.setAttribute("style","color: red;");
+   		identityValueDisplay.setAttribute("style","color: red;");    	
+    }
+
+    else if (identityValue > 50 && identityValue <= 80)
+    {
+    	identityLabelDisplay.innerHTML = "Very Conservative"
+   		identityLabelDisplay.setAttribute("style","color: red;");
+   		identityValueDisplay.setAttribute("style","color: red;");    	
+    }
+
+    else if (identityValue > 80 && identityValue <= 100)
+    {
+    	identityLabelDisplay.innerHTML = "I'm Conservative and I'm Correct."
+   		identityLabelDisplay.setAttribute("style","color: red;");
+   		identityValueDisplay.setAttribute("style","color: red;");    	
+    }
+
+    else if (identityValue < 0 && identityValue >= -10)
+    {
+    	identityLabelDisplay.innerHTML = "Pretty Neutral, maybe with a sprinkle of Liberalism"
+   		identityLabelDisplay.setAttribute("style","color: purple;");
+   		identityValueDisplay.setAttribute("style","color: blue;");
+    }
+
+    else if (identityValue > 10 && identityValue <= 25)
+    {
+    	identityLabelDisplay.innerHTML = "Leaning Conservative"
+   		identityLabelDisplay.setAttribute("style","color: blue;");
+   		identityValueDisplay.setAttribute("style","color: blue;");    	
+    }
+
+    else if (identityValue > 25 && identityValue <= 50)
+    {
+    	identityLabelDisplay.innerHTML = "Conservative"
+   		identityLabelDisplay.setAttribute("style","color: blue;");
+   		identityValueDisplay.setAttribute("style","color: blue;");    	
+    }
+
+    else if (identityValue > 50 && identityValue <= 80)
+    {
+    	identityLabelDisplay.innerHTML = "Very Conservative"
+   		identityLabelDisplay.setAttribute("style","color: blue;");
+   		identityValueDisplay.setAttribute("style","color: blue;");    	
+    }
+
+    else if (identityValue > 80 && identityValue <= 100)
+    {
+    	identityLabelDisplay.innerHTML = "I'm Conservative and I'm Correct."
+   		identityLabelDisplay.setAttribute("style","color: blue;");
+   		identityValueDisplay.setAttribute("style","color: blue;");    	
+    }
+
+}
+
+
 $('#label').html("")
 
 
 $('.button').hover(
 	function(event)
 	{
-		if (identity > 2)
+		if (identityExplored)
 		{
 			$(this).animate({'width':'100%'}, 100)
 		}
@@ -14,7 +108,7 @@ $('.button').hover(
 
 	function(event)
 	{
-		if (identity > 2)
+		if (identityExplored)
 		{
 			$(this).animate({'width':'50%'}, 100)
 		}
@@ -107,5 +201,3 @@ $(document).on('click', '#choose', function(event)
 {
 	$('#slider').css({'background': 'red'})
 })
-
-//event.clientX-fullWidth*0.05-35
