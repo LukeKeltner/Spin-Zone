@@ -12,11 +12,13 @@ body
 #identity-value
 {
 	font-size: 30px;
+	color: purple;
 }
 
 #your-identity-label
 {
 	font-size: 30px;
+	color: purple;
 }
 
 .slide-container

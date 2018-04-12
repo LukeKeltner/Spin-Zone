@@ -63,38 +63,35 @@ slider.oninput = function()
    		identityValueDisplay.setAttribute("style","color: blue;");
     }
 
-    else if (identityValue > 10 && identityValue <= 25)
+    else if (identityValue < -10 && identityValue >= -25)
     {
-    	identityLabelDisplay.innerHTML = "Leaning Conservative"
+    	identityLabelDisplay.innerHTML = "Leaning Liberal"
    		identityLabelDisplay.setAttribute("style","color: blue;");
    		identityValueDisplay.setAttribute("style","color: blue;");    	
     }
 
-    else if (identityValue > 25 && identityValue <= 50)
+    else if (identityValue < -25 && identityValue >= -50)
     {
-    	identityLabelDisplay.innerHTML = "Conservative"
+    	identityLabelDisplay.innerHTML = "Liberal"
    		identityLabelDisplay.setAttribute("style","color: blue;");
    		identityValueDisplay.setAttribute("style","color: blue;");    	
     }
 
-    else if (identityValue > 50 && identityValue <= 80)
+    else if (identityValue < -50 && identityValue >= -80)
     {
-    	identityLabelDisplay.innerHTML = "Very Conservative"
+    	identityLabelDisplay.innerHTML = "Very Liberal"
    		identityLabelDisplay.setAttribute("style","color: blue;");
    		identityValueDisplay.setAttribute("style","color: blue;");    	
     }
 
-    else if (identityValue > 80 && identityValue <= 100)
+    else if (identityValue < -80 && identityValue >= -100)
     {
-    	identityLabelDisplay.innerHTML = "I'm Conservative and I'm Correct."
+    	identityLabelDisplay.innerHTML = "I'm Liberal and I'm Correct."
    		identityLabelDisplay.setAttribute("style","color: blue;");
    		identityValueDisplay.setAttribute("style","color: blue;");    	
     }
 
 }
-
-
-$('#label').html("")
 
 
 $('.button').hover(
@@ -117,7 +114,13 @@ $('.button').hover(
 
 $(document).on('click', '.button', function()
 {
-	identity = $(this).attr('identity')
+	$('.choose-identity').fadeOut(function()
+	{
+		setTimeout(function()
+		{
+			$('.rate-articles').fadeIn(1000)
+		},100)
+	})
 	var color = $(this).css('backgroundColor');
 	$('.button').css({'background-color':'gray'})
 	$('.button').prop("disabled",true);
